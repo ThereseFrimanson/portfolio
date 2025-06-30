@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<!--
+	Alpha by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<header>
+    <title>Stage - Therese Frimanson</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+</header>
+
+<body class="is-preload">
+	<div id="page-wrapper">
+
+		<!--header-->
+        <div id="header-placeholder"></div>
+
+		<!-- Main -->
+		<section id="main" class="container">
+			<header>
+				<h2>Stage</h2>
+				<p>Here you can find information about my career.</p>
+			</header>
+
+			<section class="box">
+                <h3>My Youtube Channel!</h3>
+                <p>To start with: here is my youtube channel! There are at the moment 9 videos. </p>
+                <ul class="actions">
+                    <li><a href="https://www.youtube.com/@theresefrimanson"
+                            class="button">Youtube</a></li>
+                </ul>
+            </section>
+
+			<div class="box">
+				<span class="image featured"><img src="images/pic01.jpg" alt="" /></span>
+				<h3>This is a subheading</h3>
+				<p>Cep risus aliquam gravida cep ut lacus amet. Adipiscing faucibus nunc placerat. Tempus adipiscing
+					turpis non blandit accumsan eget lacinia nunc integer interdum amet aliquam ut orci non col ut ut
+					praesent. Semper amet interdum mi. Phasellus enim laoreet ac ac commodo faucibus faucibus. Curae
+					ante vestibulum ante. Blandit. Ante accumsan nisi eu placerat gravida placerat adipiscing in risus
+					fusce vitae ac mi accumsan nunc in accumsan tempor blandit aliquet aliquet lobortis. Ultricies
+					blandit lobortis praesent turpis. Adipiscing accumsan adipiscing adipiscing ac lacinia cep. Orci
+					blandit a iaculis adipiscing ac. Vivamus ornare laoreet odio vis praesent nunc lorem mi. Erat.
+					Tempus sem faucibus ac id. Vis in blandit. Nascetur ultricies blandit ac. Arcu aliquam. Accumsan mi
+					eget adipiscing nulla. Non vestibulum ac interdum condimentum semper commodo massa arcu.</p>
+				<div class="row">
+					<div class="row-6 row-12-mobilep">
+						<h3>And now a subheading</h3>
+						<p>Adipiscing faucibus nunc placerat. Tempus adipiscing turpis non blandit accumsan eget lacinia
+							nunc integer interdum amet aliquam ut orci non col ut ut praesent. Semper amet interdum mi.
+							Phasellus enim laoreet ac ac commodo faucibus faucibus. Curae lorem ipsum adipiscing ac.
+							Vivamus ornare laoreet odio vis praesent.</p>
+					</div>
+					<div class="row-6 row-12-mobilep">
+						<h3>And another subheading</h3>
+						<p>Adipiscing faucibus nunc placerat. Tempus adipiscing turpis non blandit accumsan eget lacinia
+							nunc integer interdum amet aliquam ut orci non col ut ut praesent. Semper amet interdum mi.
+							Phasellus enim laoreet ac ac commodo faucibus faucibus. Curae lorem ipsum adipiscing ac.
+							Vivamus ornare laoreet odio vis praesent.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!--Footer-->
+        <div id="footer-placeholder"></div>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.dropotron.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+	<script>
+        fetch('includes/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
+    </script>
+    <script>
+        fetch('includes/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
+
+</body>
+
+</html>

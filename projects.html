@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html>
+<header>
+    <title>Projects - Therese Frimanson</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+</header>
+
+<body class="is-preload">
+    <div id="page-wrapper">
+
+        <!--header-->
+        <div id="header-placeholder"></div>
+        <section id="projects" class="container">
+            <header class="major">
+                <h2>My projects</h2>
+                <p>Here is a quick overview of my reasent proejcts. Each link will send you to a different website. Much
+                    more to come!</p>
+            </header>
+
+            <section class="box">
+                <h3>IoT in Sämsjön</h3>
+                <p>Under praktiken i Herrljunga kommun hösten och våren 2024-25 så byggde vi praktikanter ett API som
+                    kopplar ihop en IoT i en boj i sämsjön som mäter vattentemperatur, sparar det i en SQL-databas och
+                    sedan redovisar det på kommunens officiella hemsida.</p>
+                <p>Tyvärr syns det inte mer än en rad med temperaturen på hemsidan, som också är svår att se men om du
+                    skrollar ner lite så finns det där precis ovanför rubriken med Sandskens badplats.</p>
+                <ul class="actions">
+                    <li><a href="https://www.herrljunga.se/uppleva-och-gora/friluftsliv-natur-bad-och-vandring/sjoar-fiske-badplatser--grillplatser/badplatser"
+                            class="button">Badtemperatur i Sämsjön</a></li>
+                </ul>
+            </section>
+
+
+        </section>
+
+        <!--Footer-->
+        <div id="footer-placeholder"></div>
+
+    </div>
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        fetch('includes/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
+    </script>
+    <script>
+        fetch('includes/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
+</body>
+
+</html>

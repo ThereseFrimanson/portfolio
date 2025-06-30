@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+<header>
+    <title>CV - Therese Frimanson</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+        img.cv {
+            max-width: 800px;
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</header>
+
+<body class="is-preload">
+    <div id="page-wrapper">
+
+        <!--header-->
+        <div id="header-placeholder"></div>
+
+        <section id="cv" class="container">
+            <header class="major">
+                <h2>My CV</h2>
+                <p>Here is a quick overview of my experience and skills.</p>
+            </header>
+
+            <span class="image featured">
+                <img src="images/cv.jpeg" alt="CV for Therese Frimanson" class="cv" />
+            </span>
+        </section>
+
+
+        <!--Footer-->
+        <div id="footer-placeholder"></div>
+
+    </div>
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        fetch('includes/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
+    </script>
+    <script>
+        fetch('includes/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
+</body>
+
+</html>
