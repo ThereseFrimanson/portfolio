@@ -46,14 +46,18 @@
     <script src="assets/js/browser.min.js"></script>
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
-    <script>
-        fetch('includes/header.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('header-placeholder').innerHTML = data;
-            });
-    </script>
+    <!--<script src="assets/js/main.js"></script>-->
+	<script>
+		fetch('includes/header.html')
+			.then(response => response.text())
+			.then(data => {
+				document.getElementById('header-placeholder').innerHTML = data;
+
+			const script = document.createElement('script');
+			script.src ='assets/js/main.js';
+			document.body.appendChild(script);
+			});
+	</script>
     <script>
         fetch('includes/footer.html')
             .then(response => response.text())
