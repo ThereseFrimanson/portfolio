@@ -21,14 +21,17 @@
 
             <section class="box">
                 <h3>IoT in Sämsjön</h3>
-                <p>Under praktiken i Herrljunga kommun hösten och våren 2024-25 så byggde vi praktikanter ett API som
-                    kopplar ihop en IoT i en boj i Sämsjön som mäter vattentemperatur, sparar det i en SQL-databas och
-                    sedan redovisar det på kommunens officiella hemsida.</p>
-                <p>Tyvärr syns det inte mer än en rad med temperaturen på hemsidan, som också är svår att se men om du
-                    skrollar ner lite så finns det där precis ovanför rubriken med Sandskens badplats.</p>
+                <p>As part of a development project at Herrljunga Municipality in 2024–25, we built an API that connects
+                    to an IoT device located in a buoy in Lake Sämsjön. The system measures water temperature, stores
+                    the data in a SQL database, and presents it on the municipality’s official website.<br>
+
+                    <br>At the moment, only a single line with the temperature is displayed on the site, and it's
+                    somewhat easy to miss — but if you scroll down, you'll find it just above the heading for the
+                    Sandsken swimming area.
+                </p>
                 <ul class="actions">
                     <li><a href="https://www.herrljunga.se/uppleva-och-gora/friluftsliv-natur-bad-och-vandring/sjoar-fiske-badplatser--grillplatser/badplatser"
-                            class="button">Badtemperatur i Sämsjön</a></li>
+                            class="button">Water Temperature in Sämsjön</a></li>
                 </ul>
             </section>
 
@@ -47,17 +50,17 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <!--<script src="assets/js/main.js"></script>-->
-	<script>
-		fetch('includes/header.html')
-			.then(response => response.text())
-			.then(data => {
-				document.getElementById('header-placeholder').innerHTML = data;
+    <script>
+        fetch('includes/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
 
-			const script = document.createElement('script');
-			script.src ='assets/js/main.js';
-			document.body.appendChild(script);
-			});
-	</script>
+                const script = document.createElement('script');
+                script.src = 'assets/js/main.js';
+                document.body.appendChild(script);
+            });
+    </script>
     <script>
         fetch('includes/footer.html')
             .then(response => response.text())

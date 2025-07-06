@@ -1,45 +1,49 @@
 <!DOCTYPE HTML>
 <html>
+
 <head>
-	<title>Thank You</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="assets/css/main.css" />
+    <title>Thank You</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
 </head>
+
 <body class="is-preload">
-	<div id="page-wrapper">
-		<!--header-->
-		<div id="header-placeholder"></div>
+    <div id="page-wrapper">
+        <!--header-->
+        <div id="header-placeholder"></div>
 
-		<section id="main" class="container">
-			<header>
-				<h2>Thank You!</h2>
-				<p>Your message has been sent. I’ll get back to you as soon as I can.</p>
-				<a href="index.html" class="button">Back to Home</a>
-			</header>
-		</section>
+        <section id="main" class="container">
+            <header>
+                <h2>Thank You!</h2>
+                <p>Your message has been sent. I’ll get back to you as soon as I can.</p>
+                <a href="contact.html?cleared=true" class="button">Send another message</a>
 
-		<!--footer-->
-		<div id="footer-placeholder"></div>
-	</div>
+            </header>
+        </section>
 
-	<script>
-		fetch('includes/header.html')
-			.then(response => response.text())
-			.then(data => {
-				document.getElementById('header-placeholder').innerHTML = data;
+        <!--footer-->
+        <div id="footer-placeholder"></div>
+    </div>
 
-				const script = document.createElement('script');
-				script.src = 'assets/js/main.js';
-				document.body.appendChild(script);
-			});
-	</script>
-	<script>
-		fetch('includes/footer.html')
-			.then(response => response.text())
-			.then(data => {
-				document.getElementById('footer-placeholder').innerHTML = data;
-			});
-	</script>
+    <script>
+        fetch('includes/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+
+                const script = document.createElement('script');
+                script.src = 'assets/js/main.js';
+                document.body.appendChild(script);
+            });
+    </script>
+    <script>
+        fetch('includes/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
 </body>
+
 </html>
