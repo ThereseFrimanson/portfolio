@@ -28,7 +28,7 @@
 
 			<div class="box">
 
-				<!-- Formulär -->
+				<!-- Form -->
 				<form id="contact-form" action="https://formbold.com/s/9kEjr" method="POST">
 					<div class="row gtr-50 gtr-uniform">
 						<div class="col-6 col-12-mobilep">
@@ -52,13 +52,11 @@
 					</div>
 				</form>
 
-				<!-- Tackmeddelande (dolt från början) -->
+				<!-- Thank-you message (hidden by default) -->
 				<div id="thank-you-message" style="display: none; text-align: center;">
 					<h3>Thank you!</h3>
 					<p>Your message has been sent. I’ll get back to you as soon as I can.</p>
 					<a href="index.html" class="button special">Back to Home</a>
-					
-					
 				</div>
 
 			</div>
@@ -76,18 +74,21 @@
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/util.js"></script>
 
-	<!-- Ladda in header och footer -->
+	<!-- Load header, then apply alt class and THEN load main.js -->
 	<script>
 		fetch('includes/header.html')
 			.then(response => response.text())
 			.then(data => {
 				document.getElementById('header-placeholder').innerHTML = data;
 
+				// Ladda main.js sist så att effekterna fungerar
 				const script = document.createElement('script');
 				script.src = 'assets/js/main.js';
 				document.body.appendChild(script);
 			});
 	</script>
+
+	<!-- Footer -->
 	<script>
 		fetch('includes/footer.html')
 			.then(response => response.text())
@@ -96,7 +97,7 @@
 			});
 	</script>
 
-	<!-- Formbold: tackmeddelande efter skickat -->
+	<!-- Formbold tackmeddelande -->
 	<script>
 		document.getElementById("contact-form").addEventListener("submit", function (e) {
 			e.preventDefault();
