@@ -4055,7 +4055,7 @@ body.landing #main {
 .reference-box {
 	max-width: 1000px;
 	width: 85%;
-	margin: 0 auto;
+	margin: 1em auto;
 	padding: 2.5rem;
 	text-align: center;
 	background: white;
