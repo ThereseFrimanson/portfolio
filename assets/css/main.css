@@ -2362,6 +2362,13 @@ input[type="radio"]+label:before {
 	padding: 3em;
 }
 
+section.box {
+	margin-top: 0;
+	/* eller ett annat värde som känns lagom */
+	margin-bottom: 3em;
+}
+
+
 .box> :last-child {
 	margin-bottom: 0;
 }
@@ -2436,10 +2443,12 @@ input[type="radio"]+label:before {
 
 img.cv {
 	max-width: 800px;
-	width: 100%;
+	width: 90%;
 	height: auto;
 	display: block;
 	margin: 0 auto;
+	padding: 1rem;
+	box-sizing: border-box;
 }
 
 
@@ -3600,6 +3609,7 @@ body.landing #main {
 
 	header.major {
 		padding: 0 4em;
+		margin-bottom: 3em;
 	}
 
 	/* Box */
@@ -4051,8 +4061,8 @@ body.landing #main {
 
 }
 
-/* --- Custom: References --- */
-.reference-box {
+/* --- Custom: Recommendations --- */
+.recommendations-box {
 	max-width: 1000px;
 	width: 85%;
 	margin: 1em auto;
@@ -4063,7 +4073,7 @@ body.landing #main {
 	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
-.reference-box img.reference-image {
+.recommendations-box img.recommendations-image {
 	width: 90%;
 	max-width: 90%;
 	height: auto;
