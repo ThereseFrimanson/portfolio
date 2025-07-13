@@ -4081,3 +4081,27 @@ body.landing #main {
 	box-sizing: border-box;
 	border-radius: 6px;
 }
+
+/* --- Lightbox Gallery --- */
+.gallery {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1.5em;
+	justify-content: center;
+}
+
+.gallery img {
+	width: 200px;
+	height: auto;
+	border-radius: 6px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	transition: transform 0.2s ease;
+}
+
+.gallery img:hover {
+	transform: scale(1.2);
+}
+
+.lightboxOverlay {
+	background: rgba(255, 255, 255, 0.95) !important;
+}

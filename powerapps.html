@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Project: QMS in Microsoft Power Platform - Therese Frimanson</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <!-- Lightbox CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <div id="page-wrapper">
+        <!-- Header -->
+        <div id="header-placeholder"></div>
+
+
+        <section id="main" class="container">
+            <header class="major">
+                <h2>QMS Prototype – Screenshots</h2>
+                <p>A few highlights from the quality management system built in PowerApps.</p>
+            </header>
+
+            <section class="box">
+                <div class="gallery">
+                    <a href="images/fs.png" data-lightbox="qms" data-title="Home screen">
+                        <img src="images/tn_fs.png" alt="Home screen" />
+                    </a>
+                    <a href="images/ögfo.png" data-lightbox="qms"
+                        data-title="Strategic Focus Areas (Övergripnde fokusområde)">
+                        <img src="images/tn_ögfo.png" alt="Strategic Focus Areas (Övergripnde fokusområde)" />
+                    </a>
+                    <a href="images/ksm.png" data-lightbox="qms"
+                        data-title="Municipal Executive Committee Objectives (Kommunstyrelsens mål) and connections to Strategic Focus Areas and Operational Goals">
+                        <img src="images/tn_ksm.png"
+                            alt="Municipal Executive Committee Objectives (Kommunstyrelsens mål)" />
+                    </a>
+                    <a href="images/ksm2.png" data-lightbox="qms"
+                        data-title="Municipal Executive Committee Objectives (Kommunstyrelsens mål)">
+                        <img src="images/tn_ksm2.png"
+                            alt="Municipal Executive Committee Objectives (Kommunstyrelsens mål)" />
+                    </a>
+                    <a href="images/ksm3.png" data-lightbox="qms" data-title="Home screen">
+                        <img src="images/tn_ksm3.png" alt="Home screen" />
+                    </a>
+                    <a href="images/om.png" data-lightbox="qms" data-title="Home screen">
+                        <img src="images/tn_om.png" alt="Home screen" />
+                    </a>
+                    <a href="images/om2.png" data-lightbox="qms" data-title="Home screen">
+                        <img src="images/tn_om2.png" alt="Home screen" />
+                    </a>
+                    <a href="images/om3.png" data-lightbox="qms" data-title="Home screen">
+                        <img src="images/tn_om3.png" alt="Home screen" />
+                    </a>
+                    <a href="images/um.png" data-lightbox="qms" data-title="Goal overview">
+                        <img src="images/tn_um.png" alt="Goal overview" />
+                    </a>
+                    <a href="images/um2.png" data-lightbox="qms" data-title="Create new goal">
+                        <img src="images/tn_um2.png" alt="Create new goal" />
+                    </a>
+                    <a href="images/um3.png" data-lightbox="qms" data-title="Follow-up view">
+                        <img src="images/tn_um3.png" alt="Follow-up view" />
+                    </a>
+                </div>
+
+            </section>
+
+
+        </section>
+
+        <!--Footer-->
+        <div id="footer-placeholder"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script>
+        fetch('includes/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+
+                const script = document.createElement('script');
+                script.src = 'assets/js/main.js';
+                document.body.appendChild(script);
+            });
+    </script>
+    <script>
+        fetch('includes/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+
+</body>
+
+</html>
