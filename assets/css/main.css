@@ -4105,3 +4105,13 @@ body.landing #main {
 .lightboxOverlay {
 	background: rgba(255, 255, 255, 0.95) !important;
 }
+
+.box.special p.compact {
+  border-top: none !important;
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+
+.box.special p.compact + p.compact {
+  margin-top: 0.75em;
+}
