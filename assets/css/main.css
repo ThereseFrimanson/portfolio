@@ -4107,11 +4107,12 @@ body.landing #main {
 }
 
 .box.special p.compact {
-  border-top: none !important;
-  padding-top: 0 !important;
-  margin-top: 0 !important;
+	border-top: none !important;
+	padding-top: 0 !important;
+	margin-top: 0 !important;
 }
 
-.box.special p.compact + p.compact {
-  margin-top: 0.75em;
+.box.special p.compact+p.compact {
+	margin-top: 0.75em;
 }
+

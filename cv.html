@@ -1,5 +1,6 @@
 <!DOCTYPE HTML>
 <html lang="en">
+
 <head>
     <title>CV - Therese Frimanson</title>
     <meta charset="utf-8" />
@@ -30,9 +31,18 @@
 
             <section class="box">
                 <span class="image featured">
-                <img src="images/cv.jpeg" alt="CV for Therese Frimanson" class="cv" />
-                </span>    
+                    <img src="images/cv.jpeg" alt="CV for Therese Frimanson" class="cv" />
+                </span>
+                <ul class="actions special">
+                    <li><a href="files/Therese-Frimanson-CV-EN.pdf" class="button" download>Download my English CV
+                            (PDF)</a></li>
+                    <li><a href="files/Therese-Frimanson-CV-SE.pdf" class="button" download>Download my Swedish CV
+                            (PDF)</a></li>
+                </ul>
+
+
             </section>
+
         </section>
 
 
@@ -47,17 +57,17 @@
     <script src="assets/js/browser.min.js"></script>
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
-	<script>
-		fetch('includes/header.html')
-			.then(response => response.text())
-			.then(data => {
-				document.getElementById('header-placeholder').innerHTML = data;
+    <script>
+        fetch('includes/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
 
-			const script = document.createElement('script');
-			script.src ='assets/js/main.js';
-			document.body.appendChild(script);
-			});
-	</script>
+                const script = document.createElement('script');
+                script.src = 'assets/js/main.js';
+                document.body.appendChild(script);
+            });
+    </script>
     <script>
         fetch('includes/footer.html')
             .then(response => response.text())
