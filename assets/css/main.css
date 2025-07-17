@@ -247,7 +247,7 @@ h6 {
 	color: #646464;
 	font-weight: 300;
 	line-height: 1em;
-	margin: 0 0 0.5em 0;
+	margin: 0;
 }
 
 h1 a,
@@ -2364,7 +2364,6 @@ input[type="radio"]+label:before {
 
 section.box {
 	margin-top: 0;
-	/* eller ett annat värde som känns lagom */
 	margin-bottom: 3em;
 }
 
@@ -2447,10 +2446,9 @@ img.cv {
 	height: auto;
 	display: block;
 	margin: 0 auto;
-	padding: 1rem;
+	padding-top: 3.5rem;
 	box-sizing: border-box;
 }
-
 
 .box .image.featured {
 	border-radius: 0;
@@ -4114,4 +4112,42 @@ body.landing #main {
 
 .box.special p.compact+p.compact {
 	margin-top: 0.75em;
+}
+
+img.cv {
+	max-width: 800px;
+	width: 100%;
+	height: auto;
+	display: block;
+	margin: 0 auto;
+}
+
+.image-wrapper {
+	position: relative;
+	/* så att bilden placeras relativt denna sektion */
+}
+
+.top-right-image {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	width: 150px;
+	height: auto;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.intro-text-cover {
+	padding-right: 170px;
+	/* 150px bild + 20px luft – justera vid behov */
+}
+
+.floated-image {
+	float: right;
+	width: 150px;
+	margin-left: 20px;
+	margin-bottom: 10px;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
