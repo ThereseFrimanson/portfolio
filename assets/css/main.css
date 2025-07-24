@@ -4159,7 +4159,7 @@ img.cv {
 	top: 3em;
 	left: 2em;
 	display: flex;
-	align-items:flex-end;
+	align-items: flex-end;
 	gap: 0.5em;
 	z-index: 9999;
 }
@@ -4220,6 +4220,30 @@ body.light-mode {
 	color: #111111;
 }
 
+/* Default – ljus tema, transparent i toppen */
+body.light-mode #header {
+	background-color: transparent;
+	transition: background-color 0.3s ease;
+}
+
+/* Ljus tema – när man scrollar */
+body.light-mode #header.scrolled {
+	background-color: rgba(34, 34, 34, 0.95);
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Dark mode – alltid mörk */
+body.dark-mode #header {
+	background-color: rgba(20, 20, 20, 0.95);
+	transition: background-color 0.3s ease;
+}
+
+/* Dark mode – ev. annan skugga när man scrollat (valfritt) */
+body.dark-mode #header.scrolled {
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+
 /* DARK THEME */
 body.dark-mode {
 	background-color: #111111;
@@ -4227,3 +4251,94 @@ body.dark-mode {
 }
 
 /* Optional: Justera även andra färger, knappar etc vid behov */
+
+/* === DARK MODE UTÖKAT === */
+
+body.dark-mode .box,
+body.dark-mode .container,
+body.dark-mode .intro-text,
+body.dark-mode .features-row section,
+body.dark-mode header,
+body.dark-mode #header,
+body.dark-mode #footer {
+	background-color: #2a2a2a !important;
+	/* mörkgrå istället för svart */
+	color: #eee !important;
+}
+
+
+body.dark-mode a,
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5 {
+	color: #eee !important;
+}
+
+body.dark-mode .button,
+body.dark-mode .button.primary {
+	background-color: #444 !important;
+	border-color: #666 !important;
+	color: #eee !important;
+}
+
+body.dark-mode .button:hover {
+	background-color: #666 !important;
+}
+
+body.dark-mode #banner {
+	background-color: #1e1e1e !important;
+}
+
+body.dark-mode .box,
+body.dark-mode .features-row section {
+	box-shadow: 0 4px 10px rgba(255, 255, 255, 0.05);
+	border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .recommendations-box {
+	background-color: rgba(0, 0, 0, 0.8);
+	/* eller 0.8 om du vill ha mer kontrast */
+	color: #d6d6d6;
+}
+
+.stage-gallery {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1.5em;
+	justify-content: center;
+	max-width: 1000px;
+	margin: 2em auto;
+}
+
+
+.stage-gallery .item {
+	width: 200px;
+	text-align: center;
+}
+
+.stage-gallery .item img {
+	width: 100%;
+	height: 250px;
+	object-fit: cover;
+	border-radius: 6px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s;
+}
+
+
+.stage-gallery .item img:hover {
+	transform: scale(1.05);
+}
+
+.stage-gallery .item p {
+	margin-top: 0.5em;
+	font-size: 1em;
+	color: #444;
+	font-weight: 500;
+}
+
+body.dark-mode .stage-gallery .item p {
+	color: #ddd;
+}

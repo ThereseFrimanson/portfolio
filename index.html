@@ -120,16 +120,37 @@
 			.then(data => {
 				document.getElementById('header-placeholder').innerHTML = data;
 
-				const banner = document.getElementById("banner");
-				const header = document.getElementById("header");
-				if (banner && header) {
-					header.classList.add("alt");
+				const switchToggle = document.getElementById('theme-switch');
+				const body = document.body;
+
+				const savedTheme = localStorage.getItem('theme');
+				if (savedTheme) {
+					body.classList.add(savedTheme);
+					if (savedTheme === 'dark-mode') {
+						switchToggle.checked = true;
+					}
+				} else {
+					body.classList.add('light-mode');
 				}
 
+				switchToggle.addEventListener('change', () => {
+					if (switchToggle.checked) {
+						body.classList.remove('light-mode');
+						body.classList.add('dark-mode');
+						localStorage.setItem('theme', 'dark-mode');
+					} else {
+						body.classList.remove('dark-mode');
+						body.classList.add('light-mode');
+						localStorage.setItem('theme', 'light-mode');
+					}
+				});
+
+				// Lägg till main.js sist
 				const script = document.createElement('script');
 				script.src = 'assets/js/main.js';
 				document.body.appendChild(script);
 			});
+
 	</script>
 	<script>
 		fetch('includes/footer.html')
@@ -138,34 +159,6 @@
 				document.getElementById('footer-placeholder').innerHTML = data;
 			});
 	</script>
-	<script>
-		const switchToggle = document.getElementById('theme-switch');
-		const body = document.body;
-
-		// Spara eller hämta tidigare valt tema
-		const savedTheme = localStorage.getItem('theme');
-		if (savedTheme) {
-			body.classList.add(savedTheme);
-			if (savedTheme === 'dark-mode') {
-				switchToggle.checked = true;
-			}
-		} else {
-			body.classList.add('light-mode');
-		}
-
-		switchToggle.addEventListener('change', () => {
-			if (switchToggle.checked) {
-				body.classList.remove('light-mode');
-				body.classList.add('dark-mode');
-				localStorage.setItem('theme', 'dark-mode');
-			} else {
-				body.classList.remove('dark-mode');
-				body.classList.add('light-mode');
-				localStorage.setItem('theme', 'light-mode');
-			}
-		});
-	</script>
-
 
 </body>
 
