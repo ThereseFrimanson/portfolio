@@ -4214,94 +4214,119 @@ input:checked+.slider:before {
 	color: inherit;
 }
 
-/* LIGHT THEME (default) */
-body.light-mode {
+/* ===================================================== */
+/* 🌞 LIGHT MODE (standardläge)                         */
+/* ===================================================== */
+
+html.light-mode {
 	background-color: #ffffff;
 	color: #111111;
 }
 
-/* Default – ljus tema, transparent i toppen */
-body.light-mode #header {
+/* Header i light-mode: transparent i toppen */
+html.light-mode #header {
 	background-color: transparent;
 	transition: background-color 0.3s ease;
+	color: #111111;
 }
 
-/* Ljus tema – när man scrollar */
-body.light-mode #header.scrolled {
-	background-color: rgba(34, 34, 34, 0.95);
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+/* När man skrollar – lägg till bakgrund och skugga för läsbarhet */
+html.light-mode #header.scrolled {
+	background-color: rgba(255, 255, 255, 0.95);
+	color: #111111;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Dark mode – alltid mörk */
-body.dark-mode #header {
+/* Säkerställ att text i header alltid syns */
+html.light-mode #header a,
+html.light-mode #header h1,
+html.light-mode #header h2,
+html.light-mode #header nav ul li a {
+	color: #111111 !important;
+}
+
+
+/* ===================================================== */
+/* 🌚 DARK MODE (via <html class="dark-mode">)          */
+/* ===================================================== */
+
+html.dark-mode {
+	background-color: #1a1a1a;
+	color: #eeeeee;
+}
+
+html.dark-mode body {
+	background-color: #1c1c1c;
+}
+
+
+/* Header i dark-mode – alltid mörk bakgrund */
+html.dark-mode #header {
 	background-color: rgba(20, 20, 20, 0.95);
 	transition: background-color 0.3s ease;
 }
 
-/* Dark mode – ev. annan skugga när man scrollat (valfritt) */
-body.dark-mode #header.scrolled {
+/* Skugga vid scroll för känsla av djup */
+html.dark-mode #header.scrolled {
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-
-/* DARK THEME */
-body.dark-mode {
-	background-color: #111111;
-	color: #eeeeee;
-}
-
-/* Optional: Justera även andra färger, knappar etc vid behov */
-
-/* === DARK MODE UTÖKAT === */
-
-body.dark-mode .box,
-body.dark-mode .container,
-body.dark-mode .intro-text,
-body.dark-mode .features-row section,
-body.dark-mode header,
-body.dark-mode #header,
-body.dark-mode #footer {
+/* Gemensamma komponenter som blir mörka */
+html.dark-mode .box,
+html.dark-mode .container,
+html.dark-mode .intro-text,
+html.dark-mode .features-row section,
+html.dark-mode header,
+html.dark-mode #header,
+html.dark-mode #footer {
 	background-color: #2a2a2a !important;
-	/* mörkgrå istället för svart */
-	color: #eee !important;
+	/* mjuk mörkgrå */
+	color: #eeeeee !important;
 }
 
-
-body.dark-mode a,
-body.dark-mode h1,
-body.dark-mode h2,
-body.dark-mode h3,
-body.dark-mode h4,
-body.dark-mode h5 {
-	color: #eee !important;
+/* Textfärger */
+html.dark-mode a,
+html.dark-mode h1,
+html.dark-mode h2,
+html.dark-mode h3,
+html.dark-mode h4,
+html.dark-mode h5 {
+	color: #eeeeee !important;
 }
 
-body.dark-mode .button,
-body.dark-mode .button.primary {
+/* Knappar */
+html.dark-mode .button,
+html.dark-mode .button.primary {
 	background-color: #444 !important;
 	border-color: #666 !important;
 	color: #eee !important;
 }
 
-body.dark-mode .button:hover {
+html.dark-mode .button:hover {
 	background-color: #666 !important;
 }
 
-body.dark-mode #banner {
+/* Banner i dark mode (om den används) */
+html.dark-mode #banner {
 	background-color: #1e1e1e !important;
 }
 
-body.dark-mode .box,
-body.dark-mode .features-row section {
+/* Boxar och sektioner får subtil vit skugga */
+html.dark-mode .box,
+html.dark-mode .features-row section {
 	box-shadow: 0 4px 10px rgba(255, 255, 255, 0.05);
 	border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-body.dark-mode .recommendations-box {
+/* Rekommendationsbox i mörk layout */
+html.dark-mode .recommendations-box {
 	background-color: rgba(0, 0, 0, 0.8);
-	/* eller 0.8 om du vill ha mer kontrast */
 	color: #d6d6d6;
 }
+
+/* ===================================================== */
+/* 🎭 SCENBILDER – FÄRGANPASSNING FÖR DARK/LIGHT-MODE    */
+/* ===================================================== */
 
 .stage-gallery {
 	display: flex;
@@ -4311,7 +4336,6 @@ body.dark-mode .recommendations-box {
 	max-width: 1000px;
 	margin: 2em auto;
 }
-
 
 .stage-gallery .item {
 	width: 200px;
@@ -4327,7 +4351,6 @@ body.dark-mode .recommendations-box {
 	transition: transform 0.3s;
 }
 
-
 .stage-gallery .item img:hover {
 	transform: scale(1.05);
 }
@@ -4339,6 +4362,7 @@ body.dark-mode .recommendations-box {
 	font-weight: 500;
 }
 
-body.dark-mode .stage-gallery .item p {
+/* Mörkt tema för bildtext */
+html.dark-mode .stage-gallery .item p {
 	color: #ddd;
 }
