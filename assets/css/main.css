@@ -118,6 +118,11 @@ body {
 	line-height: 1;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+
 ol,
 ul {
 	list-style: none;
@@ -4114,13 +4119,6 @@ body.landing #main {
 	margin-top: 0.75em;
 }
 
-img.cv {
-	max-width: 800px;
-	width: 100%;
-	height: auto;
-	display: block;
-	margin: 0 auto;
-}
 
 .image-wrapper {
 	position: relative;
