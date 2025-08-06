@@ -75,23 +75,22 @@
 	<script src="assets/js/browser.min.js"></script>
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/util.js"></script>
-	<script src="assets/js/theme.js"></script>
-
-	<!-- Load header, then apply alt class and THEN load main.js -->
 	<script>
 		fetch('includes/header.html')
 			.then(response => response.text())
 			.then(data => {
 				document.getElementById('header-placeholder').innerHTML = data;
 
-				// Ladda main.js sist så att effekterna fungerar
-				const script = document.createElement('script');
-				script.src = 'assets/js/main.js';
-				document.body.appendChild(script);
+				const themeScript = document.createElement('script');
+				themeScript.src = 'assets/js/theme-handler.js';
+				document.body.appendChild(themeScript);
+
+				const mainScript = document.createElement('script');
+				mainScript.src = 'assets/js/main.js';
+				document.body.appendChild(mainScript);
 			});
 	</script>
 
-	<!-- Footer -->
 	<script>
 		fetch('includes/footer.html')
 			.then(response => response.text())

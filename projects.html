@@ -37,7 +37,8 @@
                         </p>
                         <ul class="actions">
                             <li><a href="https://www.herrljunga.se/uppleva-och-gora/friluftsliv-natur-bad-och-vandring/sjoar-fiske-badplatser--grillplatser/badplatser"
-                                    target="_blank" rel="noopener noreferrer" class="button">See it in action at Herrljunga.se</a>
+                                    target="_blank" rel="noopener noreferrer" class="button">See it in action at
+                                    Herrljunga.se</a>
                             </li>
                             <!--<li><a href="watertemperature.html" class="button">Read more about it here!</a></li>-->
                         </ul>
@@ -105,19 +106,22 @@
     <script src="assets/js/browser.min.js"></script>
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
-    <script src="assets/js/theme.js"></script>
-
     <script>
         fetch('includes/header.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('header-placeholder').innerHTML = data;
 
-                const script = document.createElement('script');
-                script.src = 'assets/js/main.js';
-                document.body.appendChild(script);
+                const themeScript = document.createElement('script');
+                themeScript.src = 'assets/js/theme-handler.js';
+                document.body.appendChild(themeScript);
+
+                const mainScript = document.createElement('script');
+                mainScript.src = 'assets/js/main.js';
+                document.body.appendChild(mainScript);
             });
     </script>
+
     <script>
         fetch('includes/footer.html')
             .then(response => response.text())
@@ -125,6 +129,7 @@
                 document.getElementById('footer-placeholder').innerHTML = data;
             });
     </script>
+
 </body>
 
 </html>
